@@ -29,24 +29,7 @@
 
 <body>
 <div id="cmWfContainer" style="margin: 0 auto; width: 100%; overflow: hidden;"></div>
-<script>
-  (function() {
-    window.TD_CM_WEB_FORM_ENV = {
-      key: "3f2660ab2c0f41c0969b7e3fe45674bb",
-      region: "eu",
-      release_stage: "prd",
-      src_prefix: "https://prd-cdn-talkdesk.talkdesk.com/case-management-ui/latest",
-      /*
-       * Use 'auto' to make the container height adaptive to its content.
-       * Or set a fixed value (e.g., '500px') to fix the container height.
-       */
-      container_height: "auto",
-    };
-    var scriptElement = document.createElement("script");
-    scriptElement.src = "https://prd-cdn-talkdesk.talkdesk.com/case-management-ui/latest/web-form/index.js?_=" + Math.random();
-    document.body.appendChild(scriptElement);
-  })();
-</script>
+
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
@@ -149,7 +132,24 @@
       </div>
     </div>
   </footer>
-
+<script>
+  (function() {
+    window.TD_CM_WEB_FORM_ENV = {
+      key: "3f2660ab2c0f41c0969b7e3fe45674bb",
+      region: "eu",
+      release_stage: "prd",
+      src_prefix: "https://prd-cdn-talkdesk.talkdesk.com/case-management-ui/latest",
+      /*
+       * Use 'auto' to make the container height adaptive to its content.
+       * Or set a fixed value (e.g., '500px') to fix the container height.
+       */
+      container_height: "auto",
+    };
+    var scriptElement = document.createElement("script");
+    scriptElement.src = "https://prd-cdn-talkdesk.talkdesk.com/case-management-ui/latest/web-form/index.js?_=" + Math.random();
+    document.body.appendChild(scriptElement);
+  })();
+</script>
  
 </body>
 
