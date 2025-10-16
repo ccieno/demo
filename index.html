@@ -20,10 +20,7 @@
 
   <!-- Custom styles for this template -->
   <link href="css/clean-blog.min.css" rel="stylesheet">
-  <script src="https://cdn.prod.uk.five9.net/static/stable/chat/wrapper/index.js"></script>
-
-  <!-- Telephone number formatting plugin -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/css/intlTelInput.css">
+  <script src="https://app.five9.eu/consoles/SocialWidget/five9-social-widget.min.js"></script>
 
 </head>
 
@@ -57,7 +54,7 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -78,7 +75,7 @@
         <div class="post-preview">
           <a href="posts_list.html">
             <h2 class="post-title">
-              CX in 2025
+              CX in 2025 and beyond
             </h2>
             <h3 class="post-subtitle">
               How can AI improve my CX...
@@ -88,7 +85,7 @@
         <hr>
                <!-- Pager -->
         <div class="clearfix">
-          <a class="btn btn-primary float-right" href="posts_list.html">Ask for Demo... &rarr;</a>
+          <a class="btn btn-primary float-right" href="posts_list.html">All Posts &rarr;</a>
         </div>
       </div>
     </div>
@@ -135,95 +132,53 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://app.five9.eu/consoles/SocialWidget/five9-social-widget.min.js"></script>
 
-  <!-- WebChat -->
+  <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
 <script>
-  F9.Chat.Wrapper.init({
-    cdn: 'prod-uk',
-    useBusinessHours: false,
-    languages: {"enabled":false,"backgroundColor":"#65758e"},
-    l10n: {"en":{"messenger":{"customText":{}},"systemMessages":{"transferredToParticipant":"The chat has been transferred to {name}.","transferredToGroup":"That chat has been transferred to group {group}."},"captureFields":[{"k":"name","l":"Name","p":"Enter your name..."},{"k":"email","l":"Email Address","p":"Enter your email..."},{"k":"Question","l":"Question","p":"What can we help you with today?"}]}},
-    prepopulatedFields: [{"k":"campaign","v":"American Attractions - Customer Services"}],
-    messenger: {"integrationId":"7a8b493b-5809-469f-b5a3-b4fd3e4f1bf6","soundNotificationEnabled":true,"transcriptPrintingEnabled":false,"menuItems":{"imageUpload":true,"fileUpload":true,"shareLocation":true},"embedded":false,"setViewportScale":false,"browserStorage":"sessionStorage","fixedHeader":false,"displayStyle":"button","customColors":{"brandColor":"65758e","conversationColor":"0099ff","actionColor":"0099ff"}},
-    clearMessagesTimeout: 3
-  });
-  </script>
+var options = {
+	"rootUrl": "https://app.five9.eu/consoles/",
+	"type": "chat",
+	"title": "Babble",
+	"tenant": "Babble",
+	"profiles": "SE Demo Campaign",
+	"showProfiles": true,
+	"autostart": true,
+	"theme": "default-theme.css",
+	"surveyOptions": {
+		"showComment": true,
+		"requireComment": false
+	},
+	"fields": {
+		"name": {
+			"value": "",
+			"show": true,
+			"label": "Name"
+		},
+		"email": {
+			"value": "",
+			"show": true,
+			"label": "Email"
+		},
+		"UserLocale": {
+			"value": "en",
+			"show": false
+		}
+	},
+	"playSoundOnMessage": true,
+	"allowCustomerToControlSoundPlay": false,
+	"showEmailButton": true,
+	"hideDuringAfterHours": false,
+	"useBusinessHours": false,
+	"showPrintButton": false,
+	"allowUsabilityMenu": false,
+	"enableCallback": false,
+	"callbackList": "",
+	"allowRequestLiveAgent": false
+};
+Five9SocialWidget.addWidget(options);
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-<!-- Call Me Pop-Up Form -->
-<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/js/intlTelInput.min.js"></script>
-<script src="CallMePlugin.js"></script>
-<script>
-    let CallMeParameters = {
-        // Background Image: use a link to a hosted image
-        cmBackgroundImage: "img/home-bg.jpg",
-
-        // Header Text: set the text and color here
-        cmHeaderText: "Please enter your information below and we will call you right away.",
-        cmHeaderTextColor: "#ffffff",
-
-        // Close Button: set the text and colors here
-        cmCloseButtonText: "X",
-        cmCloseButtonTextColor: "#000000",
-        cmCloseButtonBackgroundColor: "#ffffff",
-
-        // Submit Button: set the text and colors here
-        cmSubmitButtonText: "Call Me",
-        cmSubmitButtonTextColor: "#000000",
-        cmSubmitButtonBackgroundColor: "#ffffff",
-
-        // Should the email field be included?
-        cmEmailRequired: true,
-
-        // Hidden Fields Variables
-        cmDomain: "Babble",
-        cmList: "SE Web2CampaignDemo"
-    }
-</script>
-
-<!-- Email Pop-Up Form -->
-<script src="https://app.five9.eu/consoles/SocialWidget/five9-social-widget.min.js"></script>
-<script src="EmailFormPlugin.js"></script>
-<script>
-    var EmailFormParameters = {
-        // Close Button: set the text and colors here
-        efCloseButtonText: "X",
-        efCloseButtonTextColor: "#000000",
-        efCloseButtonBackgroundColor: "#ffffff",
-
-        // Form options
-        rootUrl: "https://app.five9.eu/consoles/",
-        type: "email",
-        title: "Ask us anything",
-        tenant: "Babble",
-        profiles: "SE Demo Profile",
-        showProfiles: true,
-        autostart: true,
-        theme: "default-theme.css",
-        fields: {
-            name: {
-                value: "",
-                show: true,
-                label: "Name"
-            },
-            email: {
-                value: "",
-                show: true,
-                label: "Email"
-            },
-            subject: {
-                value: "",
-                show: true,
-                label: "Subject"
-            },
-            UserLocale: {
-                value: "en",
-                show: false
-            }
-        }
-    };
 </script>
 
 </body>
