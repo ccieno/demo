@@ -1763,4 +1763,29 @@ function(b,c){var f="https://analytics.tiktok.com/i18n/pixel/events.js";a._i=a._
     
 
     
-</style></div><div id="batBeacon526772484918" style="width: 0px; height: 0px; display: none; visibility: hidden;"><img id="batBeacon858287253465" width="0" height="0" alt="" src="./bio_copy_files/0" style="width: 0px; height: 0px; display: none; visibility: hidden;"></div><iframe id="_hjSafeContext_77649493" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="./bio_copy_files/saved_resource(3).html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./bio_copy_files/saved_resource(4).html"></iframe><div><link rel="stylesheet" type="text/css" media="print" href="./bio_copy_files/print.min.css"><link rel="stylesheet" type="text/css" media="all" href="./bio_copy_files/fonts_2772272205a1569b9cf7ec56bb3915c5.min.css"></div></body></html>
+</style></div>
+			<script 
+				type="module" 
+				src="https://us01ccistatic.zoom.us/us01cci/web-sdk/zcc-sdk.js" 
+				data-apikey="pCqEd9fCTp-I9mMoBtXclQ" 
+				data-env="us01"
+				data-enable-zcb="true">
+				</script>
+			// Listen for the ZoomZccCobrowseSDK:Ready event
+window.addEventListener('ZoomZccCobrowseSDK:Ready', function(event) {
+    const button = document.getElementById('xxxxx'); // Your custom button ID
+
+    if (button) {
+        // Optional: Enable the button if it is disabled
+        button.disabled = false; 
+        
+        // Add a click event to start the Cobrowse session
+        button.addEventListener('click', function() {
+            window.ZoomZccCobrowseSDK.init();
+        });
+    }
+});
+			<!-- Add this button to your HTML -->
+<button id="startCobrowseButton" disabled>Start Cobrowse</button>
+			
+			<div id="batBeacon526772484918" style="width: 0px; height: 0px; display: none; visibility: hidden;"><img id="batBeacon858287253465" width="0" height="0" alt="" src="./bio_copy_files/0" style="width: 0px; height: 0px; display: none; visibility: hidden;"></div><iframe id="_hjSafeContext_77649493" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="./bio_copy_files/saved_resource(3).html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./bio_copy_files/saved_resource(4).html"></iframe><div><link rel="stylesheet" type="text/css" media="print" href="./bio_copy_files/print.min.css"><link rel="stylesheet" type="text/css" media="all" href="./bio_copy_files/fonts_2772272205a1569b9cf7ec56bb3915c5.min.css"></div></body></html>
