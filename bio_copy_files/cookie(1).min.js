@@ -1,0 +1,4 @@
+define([],function(){'use strict';return{set:function(name,value,options){var updatedCookie=encodeURIComponent(name)+'='+encodeURIComponent(value),optionKey,optionValue;if(typeof options.expires==='number'){options.expires=new Date(Date.now()+options.expires*864e5);}
+if(options.expires){options.expires=options.expires.toUTCString();}
+for(optionKey in options){updatedCookie+='; '+optionKey;optionValue=options[optionKey];if(optionValue!==true){updatedCookie+='='+optionValue;}}
+document.cookie=updatedCookie;},delete:function(name){this.set(name,'',{'max-age':-1,'path':'/','expires':-1});},getAllCookies:function(){return document.cookie.split(';');},getCookiesByPattern:function(pattern,cookies){let findCookies=[];const cookiesArray=cookies??this.getAllCookies();cookiesArray.forEach((cookie)=>{const match=cookie.split('=')[0].trim().match(pattern);if(match!==null){findCookies.push(match.input);}});return findCookies;}};});
