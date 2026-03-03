@@ -8,9 +8,21 @@
 
     <style>
         body {
-            background-image: url("img/hotel.png");
-            background-repeat: no-repeat;
-            background-size: 80%;
+            margin: 0;
+            background-color: #ffffff; /* white side margins */
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center; /* centers horizontally */
+        }
+
+        .image-container img {
+            width: 80%;      /* 80% width */
+            height: auto;    /* maintain aspect ratio */
+            display: block;
         }
     </style>
 
@@ -18,10 +30,16 @@
 
 <body>
 
-
-
+    <div class="image-container">
+        <img src="img/hotel.png" alt="Luxury Hotel Landing Page">
+    </div>
 
 </body>
-<script type="module" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/zcc-sdk.js" data-apikey="pCqEd9fCTp-I9mMoBtXclQ" data-env="us01"></script>
+
+<script type="module" 
+    src="https://us01ccistatic.zoom.us/us01cci/web-sdk/zcc-sdk.js" 
+    data-apikey="pCqEd9fCTp-I9mMoBtXclQ" 
+    data-env="us01">
+</script>
 
 </html>
