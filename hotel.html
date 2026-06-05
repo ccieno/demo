@@ -36,10 +36,19 @@
 
 </body>
 
-<script type="module" 
-    src="https://us01ccistatic.zoom.us/us01cci/web-sdk/zcc-sdk.js" 
-    data-apikey="pCqEd9fCTp-I9mMoBtXclQ" 
-    data-env="us01">
+<script>
+(async () => {
+  try {
+    const r = await fetch('https://zoom-sdk-config.github-b13.workers.dev/config');
+    const { apiKey } = await r.json();
+    const s = document.createElement('script');
+    s.type = 'module';
+    s.src = 'https://us01ccistatic.zoom.us/us01cci/web-sdk/zcc-sdk.js';
+    s.setAttribute('data-apikey', apiKey);
+    s.setAttribute('data-env', 'us01');
+    document.head.appendChild(s);
+  } catch(e) { console.error('Zoom SDK init failed', e); }
+})();
 </script>
 
 </html>

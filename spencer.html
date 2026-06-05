@@ -25,8 +25,20 @@
 </head>
 
 <body>
-<script data-chat-entry-id="CGq090D9Ri2qQHTYVqp1Lg" data-env="us01" data-apikey="pCqEd9fCTp-I9mMoBtXclQ" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/chat-client.js">
-  
+<script>
+(async () => {
+  try {
+    const r = await fetch('https://zoom-sdk-config.github-b13.workers.dev/config');
+    const { apiKey } = await r.json();
+    const s = document.createElement('script');
+    s.type = 'module';
+    s.src = 'https://us01ccistatic.zoom.us/us01cci/web-sdk/chat-client.js';
+    s.setAttribute('data-apikey', apiKey);
+    s.setAttribute('data-env', 'us01');
+    s.setAttribute('data-chat-entry-id', 'CGq090D9Ri2qQHTYVqp1Lg');
+    document.head.appendChild(s);
+  } catch(e) { console.error('Zoom chat SDK init failed', e); }
+})();
 </script>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
