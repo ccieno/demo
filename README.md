@@ -12,17 +12,20 @@ Each page (`OPP-XXXXXXX.html`) is a lightweight branded wrapper that loads the Z
 
 Each page:
 1. Loads custom CSS to apply the prospect's brand colours and background image
-2. Embeds the ZCC Web SDK script with a specific API key and environment (`us01`, `eu01`, etc.)
-3. The SDK renders the Zoom Contact Centre chat/voice widget in the prospect's brand context
+2. Fetches the ZCC SDK API key at runtime from a Cloudflare Worker (`zoom-sdk-config.github-b13.workers.dev/config`) — the key is never stored in the HTML source
+3. Dynamically injects the ZCC Web SDK script tag with the retrieved key and the appropriate environment (`us01`, `eu01`, etc.)
+4. The SDK renders the Zoom Contact Centre chat/voice widget in the prospect's brand context
 
 ## Adding a new demo page
 
 1. Duplicate an existing `OPP-XXXXXXX.html` file
 2. Rename it to match the new opportunity ID
 3. Update the branding (background image, colours, title)
-4. Set the correct `data-apikey` and `data-env` attributes on the ZCC SDK script tag
+4. Set the correct `data-env` attribute in the script block (e.g. `us01` or `eu01`)
 5. Add any prospect logo to the `img/` folder
 6. Commit and push — GitHub Pages deploys automatically
+
+> **Note:** The API key is fetched dynamically from the Cloudflare Worker — do not hardcode it in the HTML.
 
 ## Structure
 
