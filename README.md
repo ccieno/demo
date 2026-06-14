@@ -8,7 +8,7 @@ A GitHub Pages site hosting bespoke, branded demo pages for individual prospects
 
 Each pageis a lightweight branded wrapper that loads the ZCC Web SDK and presents a demo experience tailored to a specific prospect or opportunity. Pages are named after Salesforce opportunity IDs for easy tracking.
 
-## How it works
+## How it works today 14.6.26
 
 Each page:
 1. Loads custom CSS to apply the prospect's brand colours and background image
