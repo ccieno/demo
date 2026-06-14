@@ -16,7 +16,7 @@ Each page:
 3. Dynamically injects the ZCC Web SDK script tag with the retrieved key and the appropriate environment (`us01`, `eu01`, etc.)
 4. The SDK renders the Zoom Contact Centre chat/voice widget in the prospect's brand context
 
-## Adding a new demo page
+## Adding a new page
 
 1. Duplicate an existing html file
 2. Rename it to match the new opportunity ID
