@@ -47,11 +47,35 @@ Each page:
 
 > **Note:** The API key is fetched dynamically from the Cloudflare Worker — do not hardcode it in the HTML.
 
+## Access / SSO
+
+`eno.solutions` is **publicly accessible** — no Google SSO is required. Demo pages are shared directly with prospects via URL.
+
+To re-enable Google SSO (e.g. for internal use):
+
+```sh
+export CLOUDFLARE_API_TOKEN="..."
+export ALLOW_EMAIL="your-email@example.com"
+scripts/configure-access.sh
+```
+
+To remove SSO again:
+
+```sh
+export CLOUDFLARE_API_TOKEN="..."
+scripts/remove-access.sh
+```
+
+Both scripts require a Cloudflare API token with `Access: Apps and Policies Write` permission.
+
 ## Structure
 
 ```
 demo/
-├── prospect.html   # One file per prospect opportunity
+├── prospect.html      # One file per prospect opportunity
 ├── img/               # Prospect logos and background images
+├── scripts/
+│   ├── configure-access.sh  # Enable Google SSO via Cloudflare Access
+│   └── remove-access.sh     # Remove SSO (make site public)
 └── CNAME              # Custom domain config (eno.solutions)
 ```

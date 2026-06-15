@@ -12,7 +12,10 @@
         body {
             background-image: url("img/nanopore.png");
             background-repeat: no-repeat;
-            background-size: 100%;
+            background-size: 100% auto;
+            /* PNG is 1440×2424 — set min-height so the page scrolls through the full image */
+            min-height: calc(100vw * (2424 / 1440));
+            margin: 0;
         }
     </style>
 
