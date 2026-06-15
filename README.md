@@ -16,6 +16,26 @@ Each page:
 3. Dynamically injects the ZCC Web SDK script tag with the retrieved key and the appropriate environment (`us01`, `eu01`, etc.)
 4. The SDK renders the Zoom Contact Centre chat/voice widget in the prospect's brand context
 
+## Demo pages
+
+| File | Prospect |
+|------|----------|
+| `bettys.html` | Bettys and Taylors |
+| `boswell.html` | Boswell |
+| `nanopore.html` | Oxford Nanopore Technologies |
+| `bakery.html` | Bakery demo |
+| `hotel.html` | Hotel demo |
+| `gamcare.html` | GamCare |
+| `nrla.html` | NRLA |
+| `expat.html` | Expat |
+| `tropical.html` | Tropical |
+| `csg.html` | CSG |
+| `cameron.html` | Cameron |
+| `payhawk.html` | Payhawk |
+| `itsm.html` | ITSM demo |
+| `spencer.html` | Spencer |
+| `vulcan.html` | Vulcan |
+
 ## Adding a new page
 
 1. Duplicate an existing html file
