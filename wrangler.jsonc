@@ -8,6 +8,9 @@
   "assets": {
     "directory": "."
   },
+  "routes": [
+    { "pattern": "demo.eno.solutions/*", "zone_name": "eno.solutions" }
+  ],
   "compatibility_flags": [
     "nodejs_compat"
   ]
