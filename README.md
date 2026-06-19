@@ -4,7 +4,7 @@ Branded demo pages for individual prospects. Each HTML file embeds the Zoom Cont
 
 **Deployed at:** `demo.eno.solutions` (publicly accessible, no SSO)
 
-Previously served from `eno.solutions` — moved to `demo.eno.solutions` to free the apex domain and consolidate the subdomain architecture.
+Previously served from `eno.solutions` — moved to `demo.eno.solutions`. The apex domain `eno.solutions` intentionally serves nothing; the CNAME file has been removed to prevent GitHub Pages from activating it. Ensure the `eno.solutions` DNS A/AAAA record is removed in Cloudflare so the apex resolves to nothing.
 
 ## What it does
 
@@ -68,10 +68,10 @@ Each page loads custom CSS with the prospect's brand colours and background imag
 
 ## DNS
 
-Add a CNAME record in Cloudflare DNS:
-- **Name:** `demo`
-- **Target:** your Workers route (or `eno.solutions` if using a CNAME redirect)
-- **Proxy:** enabled
+In Cloudflare DNS:
+
+- **`demo.eno.solutions`** — CNAME pointing to the Workers route, Proxy enabled. This is the only public entry point.
+- **`eno.solutions` (apex)** — no A/AAAA/CNAME record. The apex domain should resolve to nothing; remove any record pointing it to a host. The CNAME file has been deleted from this repo so GitHub Pages cannot activate it.
 
 ## Structure
 
