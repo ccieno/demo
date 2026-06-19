@@ -1,0 +1,11 @@
+.git
+.git/**
+node_modules
+node_modules/**
+scripts
+scripts/**
+*.sh
+wrangler.jsonc
+package.json
+package-lock.json
+README.md
