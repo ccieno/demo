@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+.card-border { height: 100%; }
+
+.card-border::after { background-color: rgb(156, 163, 175); content: ""; height: 100%; transition: 0.3s ease-in-out; width: 1px; }
+
+.splide__slide:last-of-type .fixture-carousel-card-after-fill::after { background: linear-gradient(rgba(0, 0, 0, 0.01) 37.8px, rgb(255, 255, 255) 0px); bottom: 0px; content: ""; position: absolute; right: -200px; top: 0px; width: 200px; }

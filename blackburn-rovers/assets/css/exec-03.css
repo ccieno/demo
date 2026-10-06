@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+.tiptap { padding: 0px; }
+
+@media (min-width: 1024px) {
+  .tiptap { padding: 8px 16px; }
+}
+
+.row-narrow .tiptap { padding: 0px !important; }
+
+@media (min-width: 1024px) {
+  .row-contained .tiptap { padding: 8px 16px !important; }
+}
+
+.row-contained .tiptap { padding: 0px !important; }
+
+.tiptap ol li, .tiptap ol li p, .tiptap p, .tiptap ul li, .tiptap ul li p { font-size: 18px; }
+
+@media screen and (min-width: 640px) {
+  .tiptap ol li, .tiptap ol li p, .tiptap p, .tiptap ul li, .tiptap ul li p { font-size: 20px; }
+}
+
+.tiptap p + p, .tiptap > p { margin-bottom: 16px; }
+
+.tiptap p:empty { display: flex; }
+
+.tiptap b, .tiptap strong { font-weight: 700; }
+
+.tiptap blockquote { background-color: var(--surface-high); border-left: 10px solid; color: var(--clear); margin: 1.5em 10px; padding: 0.5em 10px; quotes: "“" "”" "‘" "’"; }
+
+.tiptap .button { border-radius: 20px; cursor: pointer; display: inline-block; font-weight: 700; margin: 20px 0px; padding: 0.75rem 2rem; text-decoration: none; }
+
+.tiptap .button--primary-light { --tw-bg-opacity: 1; background-color: rgb(var(--primary-500,0 69 146)/var(--tw-bg-opacity,1)); --tw-text-opacity: 1; color: rgb(255 255 255/var(--tw-text-opacity,1)); }
+
+.tiptap .button--primary-dark { --tw-bg-opacity: 1; background-color: rgb(255 255 255/var(--tw-bg-opacity,1)); --tw-text-opacity: 1; color: rgb(var(--primary-500,0 69 146)/var(--tw-text-opacity,1)); }
+
+.tiptap h2, .tiptap h3, .tiptap h4, .tiptap h5, .tiptap h6 { color: var(--clear); font-weight: 700; margin: 32px 0px 8px; }
+
+.tiptap.dark-headings h2, .tiptap.dark-headings h3, .tiptap.dark-headings h4, .tiptap.dark-headings h5, .tiptap.dark-headings h6 { --tw-text-opacity: 1; color: rgb(0 0 0/var(--tw-text-opacity,1)); }
+
+.tiptap h2:first-child, .tiptap h3:first-child, .tiptap h4:first-child, .tiptap h5:first-child, .tiptap h6:first-child { margin-top: 0px; }
+
+.tiptap h2 { font-size: 28px; line-height: 34px; }
+
+@media screen and (min-width: 640px) {
+  .tiptap h2 { font-size: 40px; line-height: 46px; }
+}
+
+.tiptap h3 { font-size: 24px; line-height: 30px; }
+
+@media screen and (min-width: 640px) {
+  .tiptap h3 { font-size: 32px; line-height: 38px; }
+}
+
+.tiptap h4 { font-size: 21px; line-height: 27px; }
+
+@media screen and (min-width: 640px) {
+  .tiptap h4 { font-size: 24px; line-height: 30px; }
+}
+
+.tiptap h5 { font-size: 18px; line-height: 24px; }
+
+@media screen and (min-width: 640px) {
+  .tiptap h5 { font-size: 20px; line-height: 26px; }
+}
+
+.tiptap h6 { font-size: 13px; line-height: 19px; }
+
+@media screen and (min-width: 640px) {
+  .tiptap h6 { font-size: 16px; line-height: 24px; }
+}
+
+.tiptap a { color: var(--hyperlink-color); text-decoration: underline; }
+
+.tiptap a:hover { color: var(--hyperlink-color-hover); text-decoration: none; }
+
+.tiptap ul { counter-reset: li 0; list-style: none; margin: 1em 0px; padding: 0px 0px 0px 1em; }
+
+.tiptap ul li { margin: 0px 0px 1em 1em; position: relative; }
+
+.tiptap ul li::before { background-color: var(--clear); border-radius: 50%; content: ""; height: 8px; left: -1em; position: absolute; top: 0.5em; width: 8px; }
+
+.tiptap ol li::before { content: counter(li) "."; display: inline-block; font-weight: inherit; height: max-content; margin-left: -1.5em; margin-right: 0.5em; text-align: right; width: 1em; }
+
+.tiptap ol { counter-reset: li 0; list-style: none; margin: 1em 0px; padding: 0px 0px 0px 1em; }
+
+.tiptap ol li { counter-increment: li 1; display: flex; margin: 0px 0px 1em 1em; position: relative; }
+
+.tiptap table { border: 0 solid var(--clear); border-collapse: collapse; margin-bottom: 1em; text-align: left; width: 100%; }
+
+.tiptap thead tr { background-color: transparent; border: 0 solid var(--clear); }
+
+.tiptap tr td { border: 1px solid var(--clear) !important; }
+
+.tiptap th { background-color: transparent; border: 0 solid var(--clear); font-weight: 700; padding: 0.5em; }
+
+.tiptap table:not(.multi-rowspan) tr:nth-child(2n+1) td { background-color: var(--surface-high); }
+
+.tiptap table:not(.multi-rowspan) tr:nth-child(2n) td { background-color: transparent; }
+
+.tiptap td { border: 1px solid var(--clear); font-size: 0.8em; font-weight: 400; padding: 0.5em; }
+
+.tiptap blockquote p { font-size: 24px; font-weight: 700; line-height: 1.3; margin: 1rem 0.5rem; text-transform: none; }

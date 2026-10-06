@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+.lds-ring, .lds-ring div { box-sizing: border-box; }
+
+.lds-ring { display: inline-block; position: relative; }
+
+.lds-ring.large { height: 80px; width: 80px; }
+
+.lds-ring.medium { height: 60px; width: 60px; }
+
+.lds-ring.small { height: 40px; width: 40px; }
+
+.lds-ring.extra-small { height: 28px; width: 28px; }
+
+.lds-ring div { animation: 1.2s cubic-bezier(0.5, 0, 0.5, 1) 0s infinite normal none running lds-ring; border-width: 8px; border-style: solid; border-color: currentcolor transparent transparent; border-image: none; border-radius: 50%; box-sizing: border-box; display: block; height: 64px; position: absolute; width: 64px; }
+
+.lds-ring div:first-child { animation-delay: -0.45s; }
+
+.lds-ring div:nth-child(2) { animation-delay: -0.3s; }
+
+.lds-ring div:nth-child(3) { animation-delay: -0.15s; }
+
+.lds-ring.large div { border-width: 8px; height: 64px; margin: 8px; width: 64px; }
+
+.lds-ring.medium div { border-width: 6px; height: 48px; margin: 6px; width: 48px; }
+
+.lds-ring.small div { border-width: 4px; height: 32px; margin: 4px; width: 32px; }
+
+.lds-ring.extra-small div { border-width: 4px; height: 20px; margin: 4px; width: 20px; }
+
+@keyframes lds-ring { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(1turn); }
+}

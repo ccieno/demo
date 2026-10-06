@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+:root:has(.lock-scroll) { overflow: hidden; }
+
+#page::before { backdrop-filter: blur(2px); background: rgba(25, 25, 25, 0.6); content: ""; height: 100%; inset: 0px; opacity: 0; pointer-events: none; position: fixed; transition: 0.8s ease-in-out; width: 100%; z-index: 99; }
+
+:root:has(.overlay-active) #page::before { opacity: 1; pointer-events: all; }
+
+.bmpui-seekbar-playbackposition, .bmpui-seekbar-playbackposition-marker { background-color: var(--accent) !important; }
+
+.bmpui-seekbar-playbackposition-marker { border-color: var(--accent) !important; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+.no-scrollbar { scrollbar-width: none; }
+
+.safari-typography { -webkit-font-smoothing: antialiased; font-synthesis-weight: none; }

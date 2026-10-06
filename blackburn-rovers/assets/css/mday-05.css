@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+@font-face { font-display: swap; font-family: "Fjalla One"; font-style: normal; font-weight: 400; src: url("data:font/woff2;base64,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") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-display: swap; font-family: "Fjalla One"; font-style: normal; font-weight: 400; src: url("../fonts/Fjalla_One-normal-400-vietnamese.BJfjCARu.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-display: swap; font-family: "Fjalla One"; font-style: normal; font-weight: 400; src: url("../fonts/Fjalla_One-normal-400-latin-ext.DnaR4E1z.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-display: swap; font-family: "Fjalla One"; font-style: normal; font-weight: 400; src: url("../fonts/Fjalla_One-normal-400-latin.B_797-mG.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 400; src: url("../fonts/Inter-normal-400-cyrillic-ext.BOeWTOD4.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 400; src: url("../fonts/Inter-normal-400-cyrillic.DqGufNeO.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 400; src: url("../fonts/Inter-normal-400-greek-ext.DlzME5K_.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 400; src: url("../fonts/Inter-normal-400-greek.CkhJZR-_.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 400; src: url("../fonts/Inter-normal-400-vietnamese.CBcvBZtf.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 400; src: url("../fonts/Inter-normal-400-latin-ext.DO1Apj_S.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 400; src: url("../fonts/Inter-normal-400-latin.Dx4kXJAl.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 500; src: url("../fonts/Inter-normal-400-cyrillic-ext.BOeWTOD4.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 500; src: url("../fonts/Inter-normal-400-cyrillic.DqGufNeO.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 500; src: url("../fonts/Inter-normal-400-greek-ext.DlzME5K_.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 500; src: url("../fonts/Inter-normal-400-greek.CkhJZR-_.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 500; src: url("../fonts/Inter-normal-400-vietnamese.CBcvBZtf.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 500; src: url("../fonts/Inter-normal-400-latin-ext.DO1Apj_S.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 500; src: url("../fonts/Inter-normal-400-latin.Dx4kXJAl.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 600; src: url("../fonts/Inter-normal-400-cyrillic-ext.BOeWTOD4.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 600; src: url("../fonts/Inter-normal-400-cyrillic.DqGufNeO.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 600; src: url("../fonts/Inter-normal-400-greek-ext.DlzME5K_.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 600; src: url("../fonts/Inter-normal-400-greek.CkhJZR-_.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 600; src: url("../fonts/Inter-normal-400-vietnamese.CBcvBZtf.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 600; src: url("../fonts/Inter-normal-400-latin-ext.DO1Apj_S.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 600; src: url("../fonts/Inter-normal-400-latin.Dx4kXJAl.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 700; src: url("../fonts/Inter-normal-400-cyrillic-ext.BOeWTOD4.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 700; src: url("../fonts/Inter-normal-400-cyrillic.DqGufNeO.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 700; src: url("../fonts/Inter-normal-400-greek-ext.DlzME5K_.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 700; src: url("../fonts/Inter-normal-400-greek.CkhJZR-_.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 700; src: url("../fonts/Inter-normal-400-vietnamese.CBcvBZtf.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 700; src: url("../fonts/Inter-normal-400-latin-ext.DO1Apj_S.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 700; src: url("../fonts/Inter-normal-400-latin.Dx4kXJAl.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 800; src: url("../fonts/Inter-normal-400-cyrillic-ext.BOeWTOD4.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 800; src: url("../fonts/Inter-normal-400-cyrillic.DqGufNeO.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 800; src: url("../fonts/Inter-normal-400-greek-ext.DlzME5K_.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 800; src: url("../fonts/Inter-normal-400-greek.CkhJZR-_.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 800; src: url("../fonts/Inter-normal-400-vietnamese.CBcvBZtf.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 800; src: url("../fonts/Inter-normal-400-latin-ext.DO1Apj_S.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 800; src: url("../fonts/Inter-normal-400-latin.Dx4kXJAl.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 900; src: url("../fonts/Inter-normal-400-cyrillic-ext.BOeWTOD4.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 900; src: url("../fonts/Inter-normal-400-cyrillic.DqGufNeO.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 900; src: url("../fonts/Inter-normal-400-greek-ext.DlzME5K_.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 900; src: url("../fonts/Inter-normal-400-greek.CkhJZR-_.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 900; src: url("../fonts/Inter-normal-400-vietnamese.CBcvBZtf.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 900; src: url("../fonts/Inter-normal-400-latin-ext.DO1Apj_S.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: 900; src: url("../fonts/Inter-normal-400-latin.Dx4kXJAl.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }

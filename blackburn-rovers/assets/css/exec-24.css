@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+@keyframes claude-pulse { 
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+#claude-agent-glow-border-inner { animation: 2s ease-in-out 0s infinite normal none running claude-pulse; }
+
+@media (prefers-reduced-motion: reduce) {
+  #claude-agent-glow-border-inner { animation: auto ease 0s 1 normal none running none; }
+}

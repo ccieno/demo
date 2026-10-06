@@ -245,6 +245,26 @@ Pages under `tropical/` are **not** picked up by `update-pages.js` (it only scan
 directory), so they won't appear in the `index.html` search hub. That's intentional — the standalone
 `tropical.html` prospect page still does.
 
+## Blackburn Rovers — browsable co-browse demo (`/blackburn-rovers/`)
+
+Four-page click-through of rovers.co.uk for demoing ZVA chat → agent hand-off → Cobrowse. Served at
+`demo.eno.solutions/blackburn-rovers/` (click anywhere on a page to go to the next one).
+
+| Page | File | Notes |
+|------|------|-------|
+| 1 | `index.html` | Screenshot of home. ZVA chat starts here. |
+| 2 | `hospitality-faqs.html` | Screenshot. |
+| 3 | `executive-boxes.html` | Real DOM — **Cobrowse page**. |
+| 4 | `matchday-itineraries.html` | Real DOM — **Cobrowse page**, last page. |
+
+- **Web tag:** paste it into `blackburn-rovers/zoom-tag.html` (keep `data-enable-zcb="true"`), run
+  `python3 blackburn-rovers/set-web-tag.py`, then redeploy. Until then the pages carry empty
+  `ZOOM-WEB-TAG-START/END` markers (no chat widget).
+- Add `?nonav` to any URL to disable click-through for that page load.
+- Navigation uses relative links, so the folder must keep its `index.html`.
+- Not picked up by `update-pages.js` (top-level only), so it isn't in the search hub.
+- Detail in `blackburn-rovers/README.md`.
+
 ## DNS
 
 In Cloudflare DNS:
@@ -268,6 +288,7 @@ demo/
 │   ├── site.css         #   shared styles
 │   ├── zcc.js           #   publishes website data + browsing trail (load BEFORE the web tag)
 │   └── script.js        #   cobrowse start button hook
+├── blackburn-rovers/    # Blackburn Rovers co-browse click-through (demo.eno.solutions/blackburn-rovers/)
 ├── mancave-snooker/     # Mancave Snooker app privacy policy (served at privacy.eno.solutions/)
 ├── wrangler.jsonc       # Worker config — routes demo.eno.solutions/*
 └── scripts/             # Legacy SSO scripts (no longer needed)
