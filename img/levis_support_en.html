@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LS&CO. – Support Hub</title>
+<style>
+  :root {
+    --navy-1: #1f3a63;
+    --navy-2: #13213a;
+    --ink: #0f1420;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --red: #c0392b;
+    --red-soft: #f2d5d2;
+    --blue: #6bb4d8;
+    --tint: #fbf2f1;
+    --tint-text: #8b3a35;
+    --surface: #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--surface);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  header {
+    background: linear-gradient(110deg, var(--navy-1) 0%, #2a3a55 45%, var(--navy-2) 100%);
+    color: #fff;
+    padding: 28px 40px 32px;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 0.95;
+    letter-spacing: -0.5px;
+  }
+
+  .icons { display: flex; gap: 14px; }
+
+  .icon-btn {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background: #e9ecf1;
+    border: none;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    color: var(--navy-2);
+    font-size: 20px;
+  }
+
+  .icon-btn:focus-visible,
+  .search input:focus-visible,
+  .card:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+  }
+
+  .greeting { margin-top: 42px; font-size: 26px; font-weight: 400; }
+  .question { font-size: 34px; font-weight: 700; margin-top: 4px; letter-spacing: -0.3px; }
+
+  .search {
+    margin-top: 26px;
+    position: relative;
+  }
+
+  .search input {
+    width: 100%;
+    height: 88px;
+    border-radius: 44px;
+    border: none;
+    padding: 0 40px;
+    font-size: 26px;
+    font-family: inherit;
+    color: var(--ink);
+  }
+
+  .search input::placeholder { color: #9ca3af; }
+
+  .search .glyph {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+    font-size: 20px;
+  }
+
+  main {
+    padding: 36px 30px 60px 30px;
+    max-width: 1280px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 22px 26px;
+    border: 2px solid var(--line);
+    border-radius: 14px;
+    background: #fff;
+    color: var(--ink);
+    text-decoration: none;
+    cursor: pointer;
+    min-height: 124px;
+  }
+
+  .card.wide { grid-column: 1 / -1; }
+
+  .badge {
+    flex: 0 0 auto;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--red-soft);
+    color: var(--red);
+    font-weight: 800;
+    font-size: 19px;
+    display: grid;
+    place-items: center;
+  }
+
+  .card h3 { font-size: 21px; font-weight: 700; }
+  .card p { font-size: 16px; color: var(--muted); margin-top: 6px; letter-spacing: 0.2px; }
+
+  .card.highlight-blue {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
+  }
+  .card.highlight-blue p { color: #eef7fc; }
+  .card.highlight-blue .badge { background: #8fc8e4; color: #fff; border-radius: 12px; }
+
+  .card.highlight-red {
+    background: var(--red);
+    border-color: var(--red);
+    color: #fff;
+  }
+  .card.highlight-red p { color: #f7e1df; }
+  .card.highlight-red .badge { background: #d36a60; color: #fff; }
+
+  .card.neutral .badge { background: #efefef; color: #555; border-radius: 12px; }
+
+  h2.section-title {
+    margin: 46px 0 18px;
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    max-width: 1280px;
+  }
+
+  .stat {
+    background: var(--tint);
+    border-radius: 10px;
+    padding: 34px 20px 30px;
+    text-align: center;
+  }
+
+  .stat .num {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--tint-text);
+    line-height: 1;
+  }
+
+  .stat .label {
+    margin-top: 14px;
+    font-size: 18px;
+    color: #374151;
+    letter-spacing: 0.3px;
+  }
+
+  @media (max-width: 760px) {
+    header { padding: 22px 20px 26px; }
+    .icon-btn { width: 52px; height: 52px; font-size: 16px; }
+    .greeting { font-size: 20px; margin-top: 28px; }
+    .question { font-size: 24px; }
+    .search input { height: 60px; font-size: 18px; padding: 0 24px; }
+    main { padding: 24px 16px 40px; }
+    .grid, .stats { grid-template-columns: 1fr; }
+    .card.wide { grid-column: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="logo">LS<br>&amp;CO.</div>
+    <div class="icons">
+      <button class="icon-btn" aria-label="Notifications">&#9635;</button>
+      <button class="icon-btn" aria-label="Search">&#9906;</button>
+      <button class="icon-btn" aria-label="Profile">&#11044;</button>
+    </div>
+  </div>
+
+  <p class="greeting">Hello, James Smith</p>
+  <p class="question">What support do you need?</p>
+
+  <div class="search">
+    <input type="text" placeholder="Search" aria-label="Search">
+    <span class="glyph" aria-hidden="true">&#9906;</span>
+  </div>
+</header>
+
+<main>
+  <section class="grid" aria-label="Support categories">
+    <a class="card" href="#">
+      <div class="badge">IT</div>
+      <div>
+        <h3>Technical Support</h3>
+        <p>Get technical issue help</p>
+      </div>
+    </a>
+
+    <a class="card" href="#">
+      <div class="badge">OP</div>
+      <div>
+        <h3>Operational Support</h3>
+        <p>Request operations team services</p>
+      </div>
+    </a>
+
+    <a class="card" href="#">
+      <div class="badge">HS</div>
+      <div>
+        <h3>Health, Safety &amp; Security Reporting</h3>
+        <p>Report health, safety and security incidents</p>
+      </div>
+    </a>
+
+    <a class="card" href="#">
+      <div class="badge">AI</div>
+      <div>
+        <h3>IT Automated Solutions</h3>
+        <p>Self-service automated solutions</p>
+      </div>
+    </a>
+
+    <a class="card highlight-blue" href="#">
+      <div class="badge">FM</div>
+      <div>
+        <h3>Facilities and Maintenance Support</h3>
+        <p>Open service channel</p>
+      </div>
+    </a>
+
+    <a class="card highlight-red" href="#">
+      <div class="badge">DM</div>
+      <div>
+        <h3>My District Manager User Support</h3>
+        <p>Submit/manage tickets</p>
+      </div>
+    </a>
+
+    <a class="card neutral wide" href="#">
+      <div class="badge">FX</div>
+      <div>
+        <h3>Fixtures and Mannequins</h3>
+        <p>Order retail fixtures and mannequins</p>
+      </div>
+    </a>
+  </section>
+
+  <h2 class="section-title">Open items · Store #0217</h2>
+
+  <section class="stats" aria-label="Open items">
+    <div class="stat">
+      <div class="num">0</div>
+      <div class="label">Open Tech Support Issues</div>
+    </div>
+    <div class="stat">
+      <div class="num">6</div>
+      <div class="label">Open Ops Support Requests</div>
+    </div>
+    <div class="stat">
+      <div class="num">0</div>
+      <div class="label">Questions</div>
+    </div>
+    <div class="stat">
+      <div class="num">0</div>
+      <div class="label">Open Fixture Orders</div>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>

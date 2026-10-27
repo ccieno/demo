@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zoom and </title>
+<style>
+  :root {
+    --navy-1: #1f3a63;
+    --navy-2: #13213a;
+    --ink: #0f1420;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --red: #c0392b;
+    --red-soft: #f2d5d2;
+    --blue: #6bb4d8;
+    --tint: #fbf2f1;
+    --tint-text: #8b3a35;
+    --surface: #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--surface);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  header {
+    background: linear-gradient(110deg, var(--navy-1) 0%, #2a3a55 45%, var(--navy-2) 100%);
+    color: #fff;
+    padding: 28px 40px 32px;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 0.95;
+    letter-spacing: -0.5px;
+  }
+
+  .icons { display: flex; gap: 14px; }
+
+  .icon-btn {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background: #e9ecf1;
+    border: none;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    color: var(--navy-2);
+    font-size: 20px;
+  }
+
+  .icon-btn:focus-visible,
+  .search input:focus-visible,
+  .card:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+  }
+
+  .greeting { margin-top: 42px; font-size: 26px; font-weight: 400; }
+  .question { font-size: 34px; font-weight: 700; margin-top: 4px; letter-spacing: -0.3px; }
+
+  .search {
+    margin-top: 26px;
+    position: relative;
+  }
+
+  .search input {
+    width: 100%;
+    height: 88px;
+    border-radius: 44px;
+    border: none;
+    padding: 0 40px;
+    font-size: 26px;
+    font-family: inherit;
+    color: var(--ink);
+  }
+
+  .search input::placeholder { color: #9ca3af; }
+
+  .search .glyph {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+    font-size: 20px;
+  }
+
+  main {
+    padding: 36px 30px 60px 30px;
+    max-width: 1280px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 22px 26px;
+    border: 2px solid var(--line);
+    border-radius: 14px;
+    background: #fff;
+    color: var(--ink);
+    text-decoration: none;
+    cursor: pointer;
+    min-height: 124px;
+  }
+
+  .card.wide { grid-column: 1 / -1; }
+
+  .badge {
+    flex: 0 0 auto;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--red-soft);
+    color: var(--red);
+    font-weight: 800;
+    font-size: 19px;
+    display: grid;
+    place-items: center;
+  }
+
+  .card h3 { font-size: 21px; font-weight: 700; }
+  .card p { font-size: 16px; color: var(--muted); margin-top: 6px; letter-spacing: 0.2px; }
+
+  .card.highlight-blue {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
+  }
+  .card.highlight-blue p { color: #eef7fc; }
+  .card.highlight-blue .badge { background: #8fc8e4; color: #fff; border-radius: 12px; }
+
+  .card.highlight-red {
+    background: var(--red);
+    border-color: var(--red);
+    color: #fff;
+  }
+  .card.highlight-red p { color: #f7e1df; }
+  .card.highlight-red .badge { background: #d36a60; color: #fff; }
+
+  .card.neutral .badge { background: #efefef; color: #555; border-radius: 12px; }
+
+  h2.section-title {
+    margin: 46px 0 18px;
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    max-width: 1280px;
+  }
+
+  .stat {
+    background: var(--tint);
+    border-radius: 10px;
+    padding: 34px 20px 30px;
+    text-align: center;
+  }
+
+  .stat .num {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--tint-text);
+    line-height: 1;
+  }
+
+  .stat .label {
+    margin-top: 14px;
+    font-size: 18px;
+    color: #374151;
+    letter-spacing: 0.3px;
+  }
+
+  @media (max-width: 760px) {
+    header { padding: 22px 20px 26px; }
+    .icon-btn { width: 52px; height: 52px; font-size: 16px; }
+    .greeting { font-size: 20px; margin-top: 28px; }
+    .question { font-size: 24px; }
+    .search input { height: 60px; font-size: 18px; padding: 0 24px; }
+    main { padding: 24px 16px 40px; }
+    .grid, .stats { grid-template-columns: 1fr; }
+    .card.wide { grid-column: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="logo">LS<br>&amp;CO.</div>
+    <div class="icons">
+      <button class="icon-btn" aria-label="Notificações">&#9635;</button>
+      <button class="icon-btn" aria-label="Pesquisar">&#9906;</button>
+      <button class="icon-btn" aria-label="Perfil">&#11044;</button>
+    </div>
+  </div>
+
+  <p class="greeting">Olá, Luis Figo</p>
+  <p class="question">De que apoio necessita?</p>
+
+  <div class="search">
+    <input type="text" placeholder="Pesquisar" aria-label="Pesquisar">
+    <span class="glyph" aria-hidden="true">&#9906;</span>
+  </div>
+</header>
+
+<main>
+  <section class="grid" aria-label="Categorias de apoio">
+    <a class="card" href="#">
+      <div class="badge">TI</div>
+      <div>
+        <h3>Apoio Técnico</h3>
+        <p>Obtenha ajuda com problemas técnicos</p>
+      </div>
+    </a>
+
+    <a class="card" href="#">
+      <div class="badge">OP</div>
+      <div>
+        <h3>Apoio Operacional</h3>
+        <p>Solicite serviços da equipa de operações</p>
+      </div>
+    </a>
+
+    <a class="card" href="#">
+      <div class="badge">SS</div>
+      <div>
+        <h3>Comunicação de Saúde, Segurança e Proteção</h3>
+        <p>Comunique incidentes de saúde, segurança e proteção</p>
+      </div>
+    </a>
+
+    <a class="card" href="#">
+      <div class="badge">AI</div>
+      <div>
+        <h3>Soluções Automatizadas de TI</h3>
+        <p>Soluções automatizadas de autosserviço</p>
+      </div>
+    </a>
+
+    <a class="card highlight-blue" href="#">
+      <div class="badge">IM</div>
+      <div>
+        <h3>Apoio de Instalações e Manutenção</h3>
+        <p>Abra um canal de assistência</p>
+      </div>
+    </a>
+
+    <a class="card highlight-red" href="#">
+      <div class="badge">DM</div>
+      <div>
+        <h3>Apoio ao Utilizador do Meu Gestor Distrital</h3>
+        <p>Submeta e faça a gestão de pedidos</p>
+      </div>
+    </a>
+
+    <a class="card neutral wide" href="#">
+      <div class="badge">EM</div>
+      <div>
+        <h3>Expositores e Manequins</h3>
+        <p>Encomende expositores e manequins para a loja</p>
+      </div>
+    </a>
+  </section>
+
+  <h2 class="section-title">Itens em aberto · Loja #5322</h2>
+
+  <section class="stats" aria-label="Itens em aberto">
+    <div class="stat">
+      <div class="num">0</div>
+      <div class="label">Pedidos de apoio técnico em aberto</div>
+    </div>
+    <div class="stat">
+      <div class="num">6</div>
+      <div class="label">Pedidos de apoio operacional em aberto</div>
+    </div>
+    <div class="stat">
+      <div class="num">0</div>
+      <div class="label">Dúvidas</div>
+    </div>
+    <div class="stat">
+      <div class="num">0</div>
+      <div class="label">Encomendas de expositores em aberto</div>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
